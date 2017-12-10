@@ -249,7 +249,7 @@ awful.screen.connect_for_each_screen(function(s)
         mybattery.widget.markup=bat
     end)
     mybattery.widget:connect_signal("mouse::leave", function()
-        bat=markup(beautiful.fg_normal and status=="Discharging" or muhsettings.solarized.green
+        bat=markup(bat_status=="Discharging" and beautiful.fg_normal or muhsettings.solarized.green
             ,mybattery.widget.text)
          mybattery.widget.markup=bat
     end)
