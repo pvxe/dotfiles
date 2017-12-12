@@ -245,14 +245,11 @@ awful.screen.connect_for_each_screen(function(s)
             return bat_status .. "  " .. bat_perc .. "%"
         end
     })
-    mybattery.widget:connect_signal("mouse::enter", function()
-        bat=markup(muhsettings.solarized.cyan,mybattery.widget.text)
-        mybattery.widget.markup=bat
+    mybattery.widget:connect_signal("mouse::enter", function(self)
+        self.markup=markup(muhsettings.solarized.cyan, self.text)
     end)
-    mybattery.widget:connect_signal("mouse::leave", function()
-        bat=markup(bat_status=="Discharging" and beautiful.fg_normal or muhsettings.solarized.green
-            ,mybattery.widget.text)
-         mybattery.widget.markup=bat
+    mybattery.widget:connect_signal("mouse::leave", function(self)
+        self.markup=markup(muhsettings.solarized.base0, self.text)
     end)
 
     myalsa = muhwidgets.muhalsa
