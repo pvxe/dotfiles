@@ -231,6 +231,7 @@ awful.screen.connect_for_each_screen(function(s)
     --{{{ Create battery widget
     mybattery = muhwidgets.muhbatt
     mybattery_t = awful.tooltip({
+        timeout = 60,
         objects = { mybattery.widget },
         timer_function = function()
             bat_perc = 0
