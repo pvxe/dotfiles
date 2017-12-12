@@ -260,8 +260,7 @@ awful.screen.connect_for_each_screen(function(s)
     --                      -- Fix lower font part not showing
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = 32, border_width=6 })
-    s.mywibox.shape = gears.shape.rounded_bar
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = 32, border_width=6, shape = gears.shape.rounded_bar })
     s.mybottomwibox = awful.wibar({ position = "bottom", screen = s, height = 19 })
 
     -- Add widgets to the wibox
