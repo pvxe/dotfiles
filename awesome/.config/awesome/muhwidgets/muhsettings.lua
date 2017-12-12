@@ -10,6 +10,7 @@ local solarized = {
     cyan    = "#2aa198",
     violet  = "#6c71c4",
     magenta = "#d33682",
+    yellow  = "#b58900",
 }
 local font = {
     medium = "Iosevka 8",
