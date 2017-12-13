@@ -236,10 +236,12 @@ awful.screen.connect_for_each_screen(function(s)
         timer_function = function()
             bat_perc = 0
             bat_status = ""
+            bat_ac_status="N/A"
             lain.widget.bat({
                 settings = function()
                     bat_perc = bat_now.perc
                     bat_status = bat_now.status
+                    bat_ac_status = bat_now.ac_status
                 end,
             })
             return bat_status .. "  " .. bat_perc .. "%"
@@ -249,7 +251,7 @@ awful.screen.connect_for_each_screen(function(s)
         self.markup=markup(muhsettings.solarized.cyan, self.text)
     end)
     mybattery.widget:connect_signal("mouse::leave", function(self)
-        self.markup=markup(muhsettings.solarized.base0, self.text)
+        self.markup=markup(bat_ac_status==1 and muhsettings.solarized.green or muhsettings.solarized.base0, self.text)
     end)
 
     myalsa = muhwidgets.muhalsa
