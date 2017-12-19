@@ -143,7 +143,32 @@ mytextclock_tf = awful.tooltip({
             )
         end,
     })
-
+--{{{ Create battery widget
+    mybattery = muhwidgets.muhbatt
+    mybattery_t = awful.tooltip({
+        timeout = 60,
+        objects = { mybattery.widget },
+        timer_function = function()
+            bat_perc = 0
+            bat_status = ""
+            bat_ac_status="N/A"
+            lain.widget.bat({
+                settings = function()
+                    bat_perc = bat_now.perc
+                    bat_status = bat_now.status
+                    bat_ac_status = bat_now.ac_status
+                end,
+            })
+            return bat_status .. "  " .. bat_perc .. "%"
+        end
+    })
+    mybattery.widget:connect_signal("mouse::enter", function(self)
+        self.markup=markup(muhsettings.solarized.cyan, self.text)
+    end)
+    mybattery.widget:connect_signal("mouse::leave", function(self)
+        self.markup=markup(bat_ac_status==1 and muhsettings.solarized.green or muhsettings.solarized.base0, self.text)
+    end)
+--}}}
 -- Create a wibox for each screen and add it
 local taglist_buttons = awful.util.table.join(
                     awful.button({ }, 1, function(t) t:view_only() end),
@@ -228,36 +253,7 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create a tasklist widget
     s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, tasklist_buttons)
 
-    --{{{ Create battery widget
-    mybattery = muhwidgets.muhbatt
-    mybattery_t = awful.tooltip({
-        timeout = 60,
-        objects = { mybattery.widget },
-        timer_function = function()
-            bat_perc = 0
-            bat_status = ""
-            bat_ac_status="N/A"
-            lain.widget.bat({
-                settings = function()
-                    bat_perc = bat_now.perc
-                    bat_status = bat_now.status
-                    bat_ac_status = bat_now.ac_status
-                end,
-            })
-            return bat_status .. "  " .. bat_perc .. "%"
-        end
-    })
-    mybattery.widget:connect_signal("mouse::enter", function(self)
-        self.markup=markup(muhsettings.solarized.cyan, self.text)
-    end)
-    mybattery.widget:connect_signal("mouse::leave", function(self)
-        self.markup=markup(bat_ac_status==1 and muhsettings.solarized.green or muhsettings.solarized.base0, self.text)
-    end)
-
     myalsa = muhwidgets.muhalsa
-
-    --}}}
-
     -- TODO: (Priority Low) -- Add second bottom wibox #DONE
     --                      -- Fix lower font part not showing
 
