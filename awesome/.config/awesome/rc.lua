@@ -293,7 +293,6 @@ awful.screen.connect_for_each_screen(function(s)
                 wibox.widget.textbox(' | '),
                 {mybattery.widget, bottom=2, color=muhsettings.solarized.blue, widget=wibox.container.margin},
 --            mybattery.widget,
-            powerline_widget,
                 wibox.widget.textbox(' | '),
                 {s.mylayoutbox, top=2,bottom=2,left=2,right=2, widget=wibox.container.margin},
             },
