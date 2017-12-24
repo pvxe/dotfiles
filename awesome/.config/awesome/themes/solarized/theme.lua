@@ -25,11 +25,23 @@ S_blue      =  "#268bd2"
 S_cyan      =  "#2aa198"
 S_green     =  "#859900"
 
+local os = { getenv = os.getenv }
+
 -- {{{ Main
-local theme = {}
+local theme =   {}
+theme.dir   =   os.getenv("HOME") .. "/.config/awesome/themes/solarized"
 -- theme.wallpaper = "/usr/share/awesome/themes/solarized/solarized-background.png"
-theme.wallpaper = "/home/puchero/Pictures/solarized_wp2.png"
+--theme.wallpaper = "/home/puchero/Pictures/solarized_wp2.png"
 --theme.wallpaper = "/home/puchero/Pictures/solarized_linus_wp.png"
+theme.wallpaper = function (screen, tag)
+    local wp = theme.dir .. '/wallpapers/'
+    if screen.selected_tag ~= nil and screen.selected_tag.index == 4 then
+        wp = wp .. 'solarized_linus_wp.png'
+    else
+        wp = wp .. 'solarized_wp2.png'
+    end
+    return wp
+end
 -- }}}
 
 -- {{{ Styles

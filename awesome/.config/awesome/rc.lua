@@ -228,9 +228,6 @@ end
 screen.connect_signal("property::geometry", set_wallpaper)
 
 awful.screen.connect_for_each_screen(function(s)
-    -- Wallpaper
-    set_wallpaper(s)
-
     -- Each screen has its own tag table.
     awful.tag({ "  Main ", "  Config ", "  Social ", "  Programming ", "  PDFs "}, s, awful.layout.layouts[2])
 
@@ -306,6 +303,10 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist,
         nil,
     }
+
+    -- Wallpaper
+    set_wallpaper(s)
+    s.tags[4]:connect_signal("property::selected", function(tag) set_wallpaper(s) end)
 end)
 -- }}}
 
@@ -662,25 +663,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- {{{ Custom functions for Archpuxi
-
-    -- {{{ Custom wallpaper for 'Programming' tag (n. 4) for each screen
-    local set_custom_wallpaper = function(tag)
-        cambiarfondo_cmd = "feh --bg-scale /home/puchero/Pictures/"
-        if not tag.selected then
-            cambiarfondo_cmd = cambiarfondo_cmd .. "solarized_linus_wp.png"
-        else
-            cambiarfondo_cmd = cambiarfondo_cmd .. "solarized_vim_wp.png"
-        end
-        awful.util.spawn_with_shell(cambiarfondo_cmd)
-    end
-    --- }}}
-
---    for s in screen do
---        print(s)
---    end
-
-    for s in screen do
-        s.tags[4]:connect_signal("property::selected", set_custom_wallpaper)
-    end
-
 -- }}}
