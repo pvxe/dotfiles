@@ -580,6 +580,10 @@ awful.rules.rules = {
     { rule_any = {type = { "normal", "dialog" }
       }, properties = { titlebars_enabled = true }
     },
+    -- Dialog only properties
+    { rule_any = {type = {"dialog"}
+        }, properties = {placement = awful.placement.centered}
+    },
     -- Clients that spawn in an specific tag go here
     { rule = { name = "zathura" },
       properties = { screen = 1, tag = screen[1].tags[5], switchtotag = true }
