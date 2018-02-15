@@ -21,8 +21,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'lervag/vimtex'
-Plugin 'ryanoasis/vim-devicons'
 Plugin 'mhinz/vim-startify'
+Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end()
 filetype plugin indent on
