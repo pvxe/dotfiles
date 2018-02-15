@@ -41,7 +41,7 @@ set laststatus=2 " In order for Airline to show all the time
 set showtabline=1 " Only show tab line when there's more than one tab
 let g:airline_theme     = 'solarized'
 let g:airline_powerline_fonts   = 1
-"let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 
 "let g:airline_section_z    = '%{getcwd()}'
 "let g:airline_symbols.linenr = "¶"
