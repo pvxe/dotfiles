@@ -83,6 +83,9 @@ let g:syntastic_mode_map = {
 \    "passive_filetypes": ["tex"] }
 "}}}
 "{{{ Startify configuration
+function! StartifyEntryFormat()
+    return '" " .WebDevIconsGetFileTypeSymbol(absolute_path) ."  ". entry_path'
+endfunction
 "let g:entry_format =
 "". '( '. WebDevIconsGetFileTypeSymbol(entry_path) .') '. entry_path"
 
