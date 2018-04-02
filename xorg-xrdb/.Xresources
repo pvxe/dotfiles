@@ -97,7 +97,8 @@ URxvt*depth: 32
 
 !! FONT SETTINGS !!
 !*.font: xft:Iosevka Light-11
-*.font: xft:Iosevka Nerd Font-10
+*.font: xft:Iosevka Nerd Font-10, xft:Sarasa Gothic J-10:style=Regular
+!
 !*.font: xft:Inconsolata Nerd Font-11
 URxvt.letterSpace: -1
 !URxvt.font: xft:DejaVu Sans Mono for Powerline-13
