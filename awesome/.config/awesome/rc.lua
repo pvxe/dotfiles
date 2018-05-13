@@ -393,6 +393,10 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),
 
+    -- On the fly useless gaps change
+    awful.key({ modkey, "Control" }, "+", function () lain.util.useless_gaps_resize(5) end),
+    awful.key({ modkey, "Control" }, "-", function () lain.util.useless_gaps_resize(-5) end),
+
     -- Brightness keys
     awful.key({}, "XF86MonBrightnessDown", function() awful.util.spawn("xbacklight -dec 10", false) end),
     awful.key({}, "XF86MonBrightnessUp", function() awful.util.spawn("xbacklight -inc 10", false) end),
