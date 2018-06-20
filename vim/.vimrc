@@ -1,32 +1,28 @@
 runtime! archlinux.vim
 set encoding=utf-8
 
+"{{{ vim-plug configuration
 
-"{{{ Vundle configuration
-"""""""""""""""""""""""""""""""""
-""        VUNDLE PLUGINS        "
-"""""""""""""""""""""""""""""""""
-set nocompatible
-filetype off
+" Auto-install vim-plug, see wiki for more tips
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+call plug#begin('~/.vim/plugged')
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+Plug 'scrooloose/nerdtree'
+Plug 'altercation/vim-colors-solarized'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/syntastic'
+"Plug 'Valloric/YouCompleteMe'
+Plug 'lervag/vimtex'
+Plug 'mhinz/vim-startify'
+Plug 'ryanoasis/vim-devicons'
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/syntastic'
-"Plugin 'Valloric/YouCompleteMe'
-Plugin 'lervag/vimtex'
-Plugin 'mhinz/vim-startify'
-Plugin 'ryanoasis/vim-devicons'
-
-call vundle#end()
-filetype plugin indent on
-
+call plug#end()
 "}}}
 "{{{ Airline configuration
 """"""""""""""""""""""""""""""""
