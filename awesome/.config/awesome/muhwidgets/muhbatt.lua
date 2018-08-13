@@ -20,15 +20,15 @@ local mybattery = lain.widget.bat({
         -- perc.
         local perc = bat_now.perc
         if perc > 90 then
-                bat = " "
+                bat = ""
         elseif perc > 50 then
-                bat = " "
+                bat = ""
         elseif perc > 25 then
-                bat = " "
+                bat = ""
         elseif perc > 10 then
-                bat = " "
+                bat = ""
         else
-                bat = " "
+                bat = ""
         end
 
         widget:set_markup(
