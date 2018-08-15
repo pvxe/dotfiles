@@ -402,11 +402,11 @@ globalkeys = awful.util.table.join(
 
     -- Audio FN Keys. os.execute is more responsive than awful.util.spawn
     awful.key({}, "XF86AudioRaiseVolume", function()
-        os.execute("amixer -D default sset Master 5%+", false)
+        os.execute(string.format("%s set %s 2%%+", myalsa.cmd, myalsa.channel))
         myalsa.update()
     end),
     awful.key({}, "XF86AudioLowerVolume", function()
-        os.execute("amixer -D default sset Master 5%-", false)
+        os.execute(string.format("%s set %s 2%%-", myalsa.cmd, myalsa.channel))
         myalsa.update()
     end),
     awful.key({}, "Print", function()
