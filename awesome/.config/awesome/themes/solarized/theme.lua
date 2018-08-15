@@ -52,10 +52,10 @@ theme.font      = "Iosevka Light 9"
 theme.fg_normal  = S_base00
 theme.fg_focus   = S_base0
 theme.fg_urgent  = "#CC9393"
-theme.bg_normal  = S_base03
-theme.bg_focus   = S_base02
+theme.bg_normal  = S_base02
+theme.bg_focus   = S_base03
 theme.bg_urgent  = "#3F3F3F"
-theme.bg_systray = S_base03
+theme.bg_systray = S_base02
 -- }}}
 
 -- {{{ Borders

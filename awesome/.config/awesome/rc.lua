@@ -112,8 +112,8 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
                                   }
                         })
 
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-                                     menu = mymainmenu })
+-- mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
+--                                      menu = mymainmenu })
 
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
@@ -124,7 +124,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock("  %a/%d/%b %H:%M")
+mytextclock = wibox.widget.textclock(" %a/%d/%b  %H:%M")
 mytextclock.font = muhsettings.font.light -- Its a textbox
 mytextclock:connect_signal("mouse::enter", function()
     mytextclock:set_markup(markup(muhsettings.solarized.cyan,
@@ -229,11 +229,11 @@ screen.connect_signal("property::geometry", set_wallpaper)
 
 awful.screen.connect_for_each_screen(function(s)
     -- Each screen has its own tag table.
-    awful.tag({ "  Main ", "  Config ", "  Social ", "  Programming ", "  PDFs ", "  Music"}, s, awful.layout.layouts[2])
+    awful.tag({ "  Main ", "  Config ", "  Social ", "  Haxx ", "  PDFs ", "  Music "}, s, awful.layout.layouts[2])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt {
-        prompt = "<b></b> ",
+        prompt = " <b> </b>",
     }
 --    s.mypromptbox.set_shape(gears.shape.hexagon, 70, 20)
     -- Create an imagebox widget which will contains an icon indicating which layout we're using.
@@ -255,7 +255,7 @@ awful.screen.connect_for_each_screen(function(s)
     --                      -- Fix lower font part not showing
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = 32, border_width=6, shape = gears.shape.rounded_rect })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = 32, border_width=6 })
     s.mybottomwibox = awful.wibar({ position = "bottom", screen = s, height = 19 })
 
     -- Add widgets to the wibox
@@ -270,20 +270,19 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.align.horizontal,
             { -- Left widgets
                 layout = wibox.layout.fixed.horizontal,
-                {mylauncher, top=2, bottom=2, left=2, right=2, widget=wibox.container.margin},
+                -- {mylauncher, top=2, bottom=2, left=2, right=2, widget=wibox.container.margin},
                 s.mytaglist,
                 s.mypromptbox,
             },
         --s.mytasklist, -- Middle widget
             nil,
---        wibox.widget.textbox(' '),
             { -- Right widgets
                 layout = wibox.layout.fixed.horizontal,
                 mykeyboardlayout,
                 wibox.widget.textbox('| '),
                 {s.mysystray, top=2,bottom=2,left=2,right=2, widget=wibox.container.margin},
                 wibox.widget.textbox(' | '),
-                mytextclock,
+                {mytextclock, bottom=2, color=muhsettings.solarized.blue, widget=wibox.container.margin},
                 wibox.widget.textbox(' | '),
                 {myalsa.widget, bottom=2, color=muhsettings.solarized.blue, widget=wibox.container.margin},
 --            myalsa.widget,
