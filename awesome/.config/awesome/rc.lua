@@ -409,6 +409,8 @@ globalkeys = awful.util.table.join(
         os.execute(string.format("%s set %s 2%%-", myalsa.cmd, myalsa.channel))
         myalsa.update()
     end),
+
+    -- Bind print screen with Flameshot
     awful.key({}, "Print", function()
         awful.util.spawn("flameshot gui")
     end),

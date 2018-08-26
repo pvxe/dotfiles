@@ -8,7 +8,6 @@ local mybattery = lain.widget.bat({
     --battery = "BAT0" --default "BAT0"
     --timeout = 1,
     settings = function()
-        --header = "Bat> "
 
         if bat_now.ac_status == 1 then
             status_color = muhsettings.solarized.green
