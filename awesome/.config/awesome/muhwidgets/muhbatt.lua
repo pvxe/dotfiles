@@ -33,7 +33,7 @@ local mybattery = lain.widget.bat({
 
         widget:set_markup(
             markup.font(
-                muhsettings.font.medium,
+                muhsettings.font.regular,
                 markup(status_color, bat )))
     end
 })

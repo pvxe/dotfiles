@@ -1,29 +1,24 @@
-------------------------------------------
---  "Solarizen" awesome theme   --
---    By Adrian C. (anrxc)              --
---    And Pucherito huehue              --
-------------------------------------------
-
 gears = require("gears")
+muhthemes = require("muhwidgets.muhsettings")
 
--- TODO: Can be moved to muhsettings already, and then require it
--- SOLARIZED CONSTANTS
-S_base03    =  "#002b36"
-S_base02    =  "#073642"
-S_base01    =  "#586e75"
-S_base00    =  "#657b83"
-S_base0     =  "#839496"
-S_base1     =  "#93a1a1"
-S_base2     =  "#eee8d5"
-S_base3     =  "#fdf6e3"
-S_yellow    =  "#b58900"
-S_orange    =  "#cb4b16"
-S_red       =  "#dc322f"
-S_magenta   =  "#d33682"
-S_violet    =  "#6c71c4"
-S_blue      =  "#268bd2"
-S_cyan      =  "#2aa198"
-S_green     =  "#859900"
+theme = "solarized"
+
+S_base03    =  muhthemes[theme].base03
+S_base02    =  muhthemes[theme].base02
+S_base01    =  muhthemes[theme].base01
+S_base00    =  muhthemes[theme].base00
+S_base0     =  muhthemes[theme].base0
+S_base1     =  muhthemes[theme].base1
+S_base2     =  muhthemes[theme].base2
+S_base3     =  muhthemes[theme].base3
+S_yellow    =  muhthemes[theme].yellow
+S_orange    =  muhthemes[theme].orange
+S_red       =  muhthemes[theme].red
+S_magenta   =  muhthemes[theme].magenta
+S_violet    =  muhthemes[theme].violet
+S_blue      =  muhthemes[theme].blue
+S_cyan      =  muhthemes[theme].cyan
+S_green     =  muhthemes[theme].green
 
 local os = { getenv = os.getenv }
 
@@ -46,7 +41,7 @@ theme.wallpaper = theme.dir .. '/wallpapers/solarized_arch_logo.png'
 -- }}}
 
 -- {{{ Styles
-theme.font      = "Iosevka Light 9"
+theme.font      = muhthemes.font.light
 --theme.font  =   "xos4 Terminus 10"
 
 -- {{{ Colors
@@ -80,7 +75,7 @@ theme.titlebar_bg_normal = S_base02
 -- tooltip_[font|opacity|fg_color|bg_color|border_width|border_color]
 -- Example:
 --theme.taglist_bg_focus = "#CC9393"
-theme.tooltip_font  = "Iosevka Light 9"
+--theme.tooltip_font  = "Iosevka Light 9"
 -- }}}
 
 -- {{{ Widgets
@@ -93,10 +88,10 @@ theme.tooltip_font  = "Iosevka Light 9"
 --theme.bg_widget        = "#494B4F"
 --theme.border_widget    = "#3F3F3F"
 --theme.tasklist_disable_task_name = true
-theme.taglist_shape = gears.shape.rounded_rect
+--theme.taglist_shape = gears.shape.rounded_rect
+--theme.taglist_bg_occupied = S_green
 theme.taglist_shape_border_width = 4
 theme.taglist_shape_border_color = S_base03
-theme.tasklist_shape = gears.shape.powerline
 theme.prompt_fg = S_cyan
 
 --theme.bg_systray =

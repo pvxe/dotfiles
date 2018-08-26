@@ -139,7 +139,7 @@ mytextclock_tf = awful.tooltip({
     objects = { mytextclock },
     timer_function = function()
             return os.date(
-                markup.font(muhsettings.font.medium,"%A %B %d %Y\nThe time is %T")
+                markup.font(muhsettings.font.regular,"%A %B %d %Y\nThe time is %T")
             )
         end,
     })
@@ -548,9 +548,9 @@ awful.rules.rules = {
                      screen = awful.screen.preferred,
                      placement = awful.placement.no_overlap+awful.placement.no_offscreen
      },
-     callback = function(c)
-         c.shape = gears.shape.rounded_rect
-     end
+--     callback = function(c)
+--         c.shape = gears.shape.rounded_rect
+--     end
     },
 
     -- Floating clients.
