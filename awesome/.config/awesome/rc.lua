@@ -127,7 +127,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 mytextclock = wibox.widget.textclock(" %a/%d/%b  %H:%M")
 mytextclock.font = muhsettings.font.light -- Its a textbox
 mytextclock:connect_signal("mouse::enter", function()
-    mytextclock:set_markup(markup(muhsettings.solarized.cyan,
+    mytextclock:set_markup(markup(muhsettings.theme.cyan,
         mytextclock.text))
 end)
 mytextclock:connect_signal("mouse::leave", function()
@@ -163,10 +163,10 @@ mytextclock_tf = awful.tooltip({
         end
     })
     mybattery.widget:connect_signal("mouse::enter", function(self)
-        self.markup=markup(muhsettings.solarized.cyan, self.text)
+        self.markup=markup(muhsettings.theme.cyan, self.text)
     end)
     mybattery.widget:connect_signal("mouse::leave", function(self)
-        self.markup=markup(bat_ac_status==1 and muhsettings.solarized.green or muhsettings.solarized.base0, self.text)
+        self.markup=markup(bat_ac_status==1 and muhsettings.theme.green or muhsettings.theme.base0, self.text)
     end)
 --}}}
 -- Create a wibox for each screen and add it
@@ -282,12 +282,12 @@ awful.screen.connect_for_each_screen(function(s)
                 wibox.widget.textbox('| '),
                 {s.mysystray, top=2,bottom=2,left=2,right=2, widget=wibox.container.margin},
                 wibox.widget.textbox(' | '),
-                {mytextclock, bottom=2, color=muhsettings.solarized.blue, widget=wibox.container.margin},
+                {mytextclock, bottom=2, color=muhsettings.theme.blue, widget=wibox.container.margin},
                 wibox.widget.textbox(' | '),
-                {myalsa.widget, bottom=2, color=muhsettings.solarized.blue, widget=wibox.container.margin},
+                {myalsa.widget, bottom=2, color=muhsettings.theme.blue, widget=wibox.container.margin},
 --            myalsa.widget,
                 wibox.widget.textbox(' | '),
-                {mybattery.widget, bottom=2, color=muhsettings.solarized.blue, widget=wibox.container.margin},
+                {mybattery.widget, bottom=2, color=muhsettings.theme.blue, widget=wibox.container.margin},
 --            mybattery.widget,
                 wibox.widget.textbox(' | '),
                 {s.mylayoutbox, top=2,bottom=2,left=2,right=2, widget=wibox.container.margin},

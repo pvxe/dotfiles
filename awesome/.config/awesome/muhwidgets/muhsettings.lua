@@ -23,7 +23,7 @@ local font = {
     light = "Iosevka Light 8"
 }
 muhsettings = {
-    solarized=solarized,
+    theme = solarized,
     font = font
 }
 return muhsettings

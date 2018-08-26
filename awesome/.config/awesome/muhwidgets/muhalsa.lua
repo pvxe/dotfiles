@@ -20,8 +20,8 @@ local myalsa = lain.widget.alsa({
         widget:set_markup(
             markup.font(
                 muhsettings.font.regular,
-                markup(muhsettings.solarized.base0, header) ..
-                markup(muhsettings.solarized.base01, vol_level)))
+                markup(muhsettings.theme.base0, header) ..
+                markup(muhsettings.theme.base01, vol_level)))
 
     end
 })

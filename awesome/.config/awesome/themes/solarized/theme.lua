@@ -1,24 +1,23 @@
 gears = require("gears")
-muhthemes = require("muhwidgets.muhsettings")
+muhsettings = require("muhwidgets.muhsettings")
+muhtheme = require("muhwidgets.muhsettings").theme
 
-theme = "solarized"
-
-S_base03    =  muhthemes[theme].base03
-S_base02    =  muhthemes[theme].base02
-S_base01    =  muhthemes[theme].base01
-S_base00    =  muhthemes[theme].base00
-S_base0     =  muhthemes[theme].base0
-S_base1     =  muhthemes[theme].base1
-S_base2     =  muhthemes[theme].base2
-S_base3     =  muhthemes[theme].base3
-S_yellow    =  muhthemes[theme].yellow
-S_orange    =  muhthemes[theme].orange
-S_red       =  muhthemes[theme].red
-S_magenta   =  muhthemes[theme].magenta
-S_violet    =  muhthemes[theme].violet
-S_blue      =  muhthemes[theme].blue
-S_cyan      =  muhthemes[theme].cyan
-S_green     =  muhthemes[theme].green
+S_base03    =  muhtheme.base03
+S_base02    =  muhtheme.base02
+S_base01    =  muhtheme.base01
+S_base00    =  muhtheme.base00
+S_base0     =  muhtheme.base0
+S_base1     =  muhtheme.base1
+S_base2     =  muhtheme.base2
+S_base3     =  muhtheme.base3
+S_yellow    =  muhtheme.yellow
+S_orange    =  muhtheme.orange
+S_red       =  muhtheme.red
+S_magenta   =  muhtheme.magenta
+S_violet    =  muhtheme.violet
+S_blue      =  muhtheme.blue
+S_cyan      =  muhtheme.cyan
+S_green     =  muhtheme.green
 
 local os = { getenv = os.getenv }
 
@@ -41,7 +40,7 @@ theme.wallpaper = theme.dir .. '/wallpapers/solarized_arch_logo.png'
 -- }}}
 
 -- {{{ Styles
-theme.font      = muhthemes.font.light
+theme.font      = muhsettings.font.light
 --theme.font  =   "xos4 Terminus 10"
 
 -- {{{ Colors
