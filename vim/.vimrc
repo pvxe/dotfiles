@@ -54,10 +54,14 @@ if $TERM!="linux"
     "let g:solarized_termcolors=256
     "This kills the opaque
     let g:solarized_termtrans=1
+    let g:solarized_visibility="normal"
     syntax enable
     set background=dark
     colorscheme solarized
     set t_Co=16
+    "
+    " No background for special keys (list chars)
+    hi! SpecialKey ctermbg=none
 endif
 "}}}
 "{{{ Syntastic configuration
@@ -98,7 +102,7 @@ set tabstop=4
 set expandtab
 
 set list
-set listchars=eol:↲
+set listchars=tab:\|\·,eol:↲
 
 set noshowmode
 set showcmd
