@@ -233,7 +233,7 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt {
-        prompt = " <b> </b>",
+        prompt = markup.big(" "),
     }
 --    s.mypromptbox.set_shape(gears.shape.hexagon, 70, 20)
     -- Create an imagebox widget which will contains an icon indicating which layout we're using.
@@ -397,8 +397,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "-", function () lain.util.useless_gaps_resize(-5) end),
 
     -- Brightness keys
-    awful.key({}, "XF86MonBrightnessDown", function() awful.util.spawn("xbacklight -dec 10", false) end),
-    awful.key({}, "XF86MonBrightnessUp", function() awful.util.spawn("xbacklight -inc 10", false) end),
+--    awful.key({}, "XF86MonBrightnessDown", function() awful.util.spawn("xbacklight -dec 10", false) end),
+--    awful.key({}, "XF86MonBrightnessUp", function() awful.util.spawn("xbacklight -inc 10", false) end),
 
     -- Audio FN Keys. os.execute is more responsive than awful.util.spawn
     awful.key({}, "XF86AudioRaiseVolume", function()
