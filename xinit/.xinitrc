@@ -34,9 +34,13 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+# Add folder with own patched fonts
+
 xset +fp /usr/share/fonts/patched
+
+# Start programs and launch WM
 
 nm-applet &
 compton &
-blueman-applet &
+# blueman-applet &
 exec awesome
