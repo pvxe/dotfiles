@@ -28,11 +28,6 @@ call plug#end()
 """"""""""""""""""""""""""""""""
 "           AIRLINE            "
 """"""""""""""""""""""""""""""""
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-let g:airline_symbols.space = "\ua0"
-
 set laststatus=2 " In order for Airline to show all the time
 set showtabline=1 " Only show tab line when there's more than one tab
 let g:airline_theme     = 'solarized'
@@ -95,7 +90,7 @@ let g:startify_fortune_use_unicode = 1
 let g:vimtex_compiler_latexmk = {'callback' : 0}
 "let g:startify_padding_left = 10
 
-
+set wildmenu
 
 set shiftwidth=4
 set tabstop=4
@@ -108,3 +103,7 @@ set noshowmode
 set showcmd
 set nu
 set foldmethod=marker
+
+if exists("g:loaded_webdevicons")
+  call webdevicons#refresh()
+endif
