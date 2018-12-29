@@ -89,28 +89,29 @@ urxvt*background:       [80]#002b36
 !}}}
 !! URxvt functionalities !!
 URxvt.scrollBar: false
-Xft.dpi: 166
 
 !! TRANSPARENCY SETTINGS !!
 URxvt*depth: 32
 
 
 !! FONT SETTINGS !!
-!*.font: xft:Iosevka Light-11
-*.font: xft:Iosevka Nerd Font-10:style=Light, xft:Sarasa Gothic J-10:style=Regular
-!
-!*.font: xft:Inconsolata Nerd Font-11
-URxvt.letterSpace: -1
 !URxvt.font: xft:DejaVu Sans Mono for Powerline-13
+!URxvt.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-iso8859-1
 !*.font: xft:Roboto Mono Light for Powerline-11
 !*.font: xft:Iosevka Term Light-11
 !*.font: xft:Iosevka Nerd Font-11:style=Light
 !*.font: xft:Source Code Pro for Powerline-11
 !*.font: xft:Meslo LG L for Powerline-11
 !*.font: xft:Anonymous Pro-13,xft:PowerlineSymbols:style=Medium
-!URxvt.font: -*-terminus-medium-*-*-*-*-140-*-*-*-*-iso8859-1
+*.font: xft:Iosevka Nerd Font-10:style=Light, xft:Sarasa Gothic J-10:style=Light
+*boldFont: xft:Iosevka Nerd Font:size=10
+!
+URxvt.letterSpace: -1
 
 
 ! XFT/DPI SETTINGS
-!Xft.antialias: true
-!Xft*hinting: full
+Xft.dpi: 166
+Xft.antialias: true
+Xft.hinting: true
+Xft.autohint: false
+Xft.hintstyle: hintfull
