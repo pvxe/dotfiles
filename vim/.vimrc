@@ -90,6 +90,7 @@ let g:startify_fortune_use_unicode = 1
 let g:vimtex_compiler_latexmk = {'callback' : 0}
 "let g:startify_padding_left = 10
 
+set tw=79
 set wildmenu
 
 set shiftwidth=4
