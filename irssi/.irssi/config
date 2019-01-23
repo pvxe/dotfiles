@@ -403,9 +403,10 @@ statusbar = {
 settings = {
   core = {
     real_name = "Jose M. Guisado";
-    user_name = "pux";
-    nick = "Pux";
+    user_name = "guigom";
+    nick = "guigom";
     timestamp_format = "%d/%m-%H:%M |";
   };
   "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = { theme = "default"; };
 };
