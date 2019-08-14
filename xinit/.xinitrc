@@ -38,9 +38,12 @@ fi
 
 xset +fp /usr/share/fonts/patched
 
+# Set dpi
+
+xrandr --dpi 144
+
 # Start programs and launch WM
 
 nm-applet &
 compton &
-# blueman-applet &
 exec awesome
