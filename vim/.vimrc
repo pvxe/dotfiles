@@ -1,4 +1,4 @@
-runtime! archlinux.vim
+"runtime! archlinux.vim
 set encoding=utf-8
 
 "{{{ vim-plug configuration
@@ -12,13 +12,12 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
-Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/syntastic'
 "Plug 'Valloric/YouCompleteMe'
-Plug 'lervag/vimtex'
+"Plug 'lervag/vimtex'
 Plug 'mhinz/vim-startify'
 Plug 'ryanoasis/vim-devicons'
 
@@ -30,7 +29,7 @@ call plug#end()
 """"""""""""""""""""""""""""""""
 set laststatus=2 " In order for Airline to show all the time
 set showtabline=1 " Only show tab line when there's more than one tab
-let g:airline_theme     = 'solarized'
+let g:airline_theme     = 'dark_minimal'
 let g:airline_powerline_fonts   = 1
 let g:airline#extensions#tabline#enabled = 1
 
@@ -41,23 +40,6 @@ let g:airline#extensions#tabline#enabled = 1
 "let g:airline_symbols.space = \"*"
 "let g:airline_symbols.branch = "\U2387 "
 
-"}}}
-"{{{ Solarized colorscheme
-" SOLARIZED STUFF "
-if $TERM!="linux"
-    "Uncomment this if not using solarized color theme in .Xresources
-    "let g:solarized_termcolors=256
-    "This kills the opaque
-    let g:solarized_termtrans=1
-    let g:solarized_visibility="normal"
-    syntax enable
-    set background=dark
-    colorscheme solarized
-    set t_Co=16
-    "
-    " No background for special keys (list chars)
-    hi! SpecialKey ctermbg=none
-endif
 "}}}
 "{{{ Syntastic configuration
 """"""""""""""""""""""""""""""""
@@ -87,7 +69,8 @@ endfunction
 let g:startify_fortune_use_unicode = 1
 "}}}
 
-let g:vimtex_compiler_latexmk = {'callback' : 0}
+
+"let g:vimtex_compiler_latexmk = {'callback' : 0}
 "let g:startify_padding_left = 10
 
 set tw=79
@@ -108,3 +91,4 @@ set foldmethod=marker
 if exists("g:loaded_webdevicons")
   call webdevicons#refresh()
 endif
+
