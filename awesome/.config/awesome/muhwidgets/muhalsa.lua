@@ -1,7 +1,9 @@
 local lain = require("lain")
-local muhsettings = require("muhsettings")
-
 local markup = lain.util.markup
+local muhsettings = require("muhsettings")
+local theme = require("beautiful")
+
+
 
 local myalsa = lain.widget.alsa({
 
@@ -20,8 +22,8 @@ local myalsa = lain.widget.alsa({
         widget:set_markup(
             markup.font(
                 muhsettings.font.regular,
-                markup(muhsettings.theme.base0, header) ..
-                markup(muhsettings.theme.base01, vol_level)))
+                markup(muhsettings.theme.base00, header) ..
+                markup(muhsettings.theme.base00, vol_level)))
 
     end
 })

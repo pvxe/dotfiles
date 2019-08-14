@@ -8,16 +8,14 @@ local mybattery = lain.widget.bat({
     --battery = "BAT0" --default "BAT0"
     --timeout = 1,
     settings = function()
+        local perc = bat_now.perc
 
         if bat_now.ac_status == 1 then
             status_color = muhsettings.theme.green
         else
-            status_color = muhsettings.theme.base0
+            status_color = muhsettings.theme.base00
         end
-        -- TODO: Map bat perc into some of the unicode \uf24[0-4]
-        --                and then add hover function to see exact
-        -- perc.
-        local perc = bat_now.perc
+
         if perc > 90 then
                 bat = ""
         elseif perc > 50 then

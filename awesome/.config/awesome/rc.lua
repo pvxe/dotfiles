@@ -45,12 +45,11 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
---beautiful.init(awful.util.get_themes_dir() .. "default/theme.lua")
-beautiful.init("/home/puchero/.config/awesome/themes/solarized/theme.lua")
---beautiful.init("/home/puchero/.config/awesome/themes/multicolor/theme.lua")
+--beautiful.init(awful.util.get_themes_dir() .. "muhtheme/theme.lua")
+beautiful.init("/home/puchero/.config/awesome/themes/muhtheme/theme.lua")
 -- This is used later as the default terminal and editor to run.
 -- TODO: -icon for urxvt tightly coupled. Must de-couple.
-terminal = "urxvt -icon /home/puchero/.config/awesome/themes/solarized/term.png"
+terminal = "urxvt -icon /home/puchero/.config/awesome/themes/muhtheme/term.png"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -163,10 +162,12 @@ mytextclock_tf = awful.tooltip({
         end
     })
     mybattery.widget:connect_signal("mouse::enter", function(self)
-        self.markup=markup(muhsettings.theme.cyan, self.text)
+        self.markup = markup.font(
+                muhsettings.font.regular,
+                markup(muhsettings.theme.cyan, self.text ))
     end)
     mybattery.widget:connect_signal("mouse::leave", function(self)
-        self.markup=markup(bat_ac_status==1 and muhsettings.theme.green or muhsettings.theme.base0, self.text)
+        mybattery:update()
     end)
 --}}}
 -- Create a wibox for each screen and add it
@@ -229,7 +230,7 @@ screen.connect_signal("property::geometry", set_wallpaper)
 
 awful.screen.connect_for_each_screen(function(s)
     -- Each screen has its own tag table.
-    awful.tag({ "  Main ", "  Config ", "  Social ", "  Haxx ", "  PDFs ", "  Music "}, s, awful.layout.layouts[2])
+    awful.tag({ "  Main ", "  Conf ", "  Social ", "  Code ", "  PDFs ", "  Music "}, s, awful.layout.layouts[2])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt {

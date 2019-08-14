@@ -1,3 +1,17 @@
+local tomorrow_night_eighties = {
+    base03  = "#2d2d2d",
+    base02  = "#393939",
+    base01  = "#515151",
+    base00  = "#999999",
+    base0   = "#cccccc",
+    red     = "#f2777a",
+    orange  = "#f99157",
+    yellow  = "#ffcc66",
+    green   = "#99cc99",
+    cyan    = "#66cccc",
+    blue    = "#6699cc",
+    violet  = "#cc99cc"
+}
 local solarized = {
     base0   = "#839496",
     base1   = "#93a1a1",
@@ -18,12 +32,13 @@ local solarized = {
 }
 
 -- TODO: put some fonts together inside a table
+
 local font = {
-    regular = "Iosevka 8",
-    light = "Iosevka Light 8"
+    regular = "Iosevka Pux 9",
+    light = "Iosevka Pux Light 9"
 }
 muhsettings = {
-    theme = solarized,
+    theme = tomorrow_night_eighties,
     font = font
 }
 return muhsettings

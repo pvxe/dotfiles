@@ -7,9 +7,6 @@ S_base02    =  muhtheme.base02
 S_base01    =  muhtheme.base01
 S_base00    =  muhtheme.base00
 S_base0     =  muhtheme.base0
-S_base1     =  muhtheme.base1
-S_base2     =  muhtheme.base2
-S_base3     =  muhtheme.base3
 S_yellow    =  muhtheme.yellow
 S_orange    =  muhtheme.orange
 S_red       =  muhtheme.red
@@ -23,8 +20,8 @@ local os = { getenv = os.getenv }
 
 -- {{{ Main
 local theme =   {}
-theme.dir   =   os.getenv("HOME") .. "/.config/awesome/themes/solarized"
--- theme.wallpaper = "/usr/share/awesome/themes/solarized/solarized-background.png"
+theme.dir   =   os.getenv("HOME") .. "/.config/awesome/themes/muhtheme"
+-- theme.wallpaper = "/usr/share/awesome/themes/muhtheme/solarized-background.png"
 --theme.wallpaper = "/home/puchero/Pictures/solarized_wp2.png"
 --theme.wallpaper = "/home/puchero/Pictures/solarized_linus_wp.png"
 --theme.wallpaper = function (screen, tag)
@@ -36,7 +33,8 @@ theme.dir   =   os.getenv("HOME") .. "/.config/awesome/themes/solarized"
 --    end
 --    return wp
 --end
-theme.wallpaper = theme.dir .. '/wallpapers/solarized_arch_logo.png'
+--theme.wallpaper = theme.dir .. '/wallpapers/solarized_arch_logo.png'
+theme.wallpaper = theme.dir .. '/wallpapers/tomorrow_wp2.png'
 -- }}}
 
 -- {{{ Styles
@@ -47,10 +45,10 @@ theme.font      = muhsettings.font.light
 theme.fg_normal  = S_base00
 theme.fg_focus   = S_base0
 theme.fg_urgent  = "#CC9393"
-theme.bg_normal  = S_base02
-theme.bg_focus   = S_base03
+theme.bg_normal  = S_base03
+theme.bg_focus   = S_base02
 theme.bg_urgent  = "#3F3F3F"
-theme.bg_systray = S_base02
+theme.bg_systray = theme.bg_normal
 -- }}}
 
 -- {{{ Borders
@@ -111,62 +109,62 @@ theme.menu_width  = 150
 
 -- {{{ Icons
 -- {{{ Taglist
-theme.taglist_squares_sel   = "/usr/share/awesome/themes/solarized/taglist/squarefz.png"
-theme.taglist_squares_unsel = "/usr/share/awesome/themes/solarized/taglist/squarez.png"
+theme.taglist_squares_sel   = "/usr/share/awesome/themes/muhtheme/taglist/squarefz.png"
+theme.taglist_squares_unsel = "/usr/share/awesome/themes/muhtheme/taglist/squarez.png"
 --theme.taglist_squares_resize = "false"
 -- }}}
 
 -- {{{ Misc
---theme.awesome_icon           = "/usr/share/awesome/themes/solarized/awesome-icon.png"
+--theme.awesome_icon           = "/usr/share/awesome/themes/muhtheme/awesome-icon.png"
 theme.awesome_icon      = "/home/puchero/Downloads/sugus_solarized_2.png"
 theme.menu_submenu_icon      = "/usr/share/awesome/themes/default/submenu.png"
 -- }}}
 
 -- {{{ Layout
-theme.layout_tile       = "~/.config/awesome/themes/solarized/layouts/tile.png"
-theme.layout_tileleft   = "~/.config/awesome/themes/solarized/layouts/tileleft.png"
-theme.layout_tilebottom = "~/.config/awesome/themes/solarized/layouts/tilebottom.png"
-theme.layout_tiletop    = "~/.config/awesome/themes/solarized/layouts/tiletop.png"
-theme.layout_fairv      = "~/.config/awesome/themes/solarized/layouts/fairv.png"
-theme.layout_fairh      = "~/.config/awesome/themes/solarized/layouts/fairh.png"
-theme.layout_spiral     = "~/.config/awesome/themes/solarized/layouts/spiral.png"
-theme.layout_dwindle    = "~/.config/awesome/themes/solarized/layouts/dwindle.png"
-theme.layout_max        = "~/.config/awesome/themes/solarized/layouts/max.png"
-theme.layout_fullscreen = "~/.config/awesome/themes/solarized/layouts/fullscreen.png"
-theme.layout_magnifier  = "~/.config/awesome/themes/solarized/layouts/magnifier.png"
-theme.layout_floating   = "~/.config/awesome/themes/solarized/layouts/floating.png"
-theme.layout_cornernw   = "/usr/share/awesome/themes/solarized/layouts/cornernw.png"
-theme.layout_cornerne   = "/usr/share/awesome/themes/solarized/layouts/cornerne.png"
-theme.layout_cornersw   = "/usr/share/awesome/themes/solarized/layouts/cornersw.png"
-theme.layout_cornerse   = "/usr/share/awesome/themes/solarized/layouts/cornerse.png"
+theme.layout_tile       = "~/.config/awesome/themes/muhtheme/layouts/tile.png"
+theme.layout_tileleft   = "~/.config/awesome/themes/muhtheme/layouts/tileleft.png"
+theme.layout_tilebottom = "~/.config/awesome/themes/muhtheme/layouts/tilebottom.png"
+theme.layout_tiletop    = "~/.config/awesome/themes/muhtheme/layouts/tiletop.png"
+theme.layout_fairv      = "~/.config/awesome/themes/muhtheme/layouts/fairv.png"
+theme.layout_fairh      = "~/.config/awesome/themes/muhtheme/layouts/fairh.png"
+theme.layout_spiral     = "~/.config/awesome/themes/muhtheme/layouts/spiral.png"
+theme.layout_dwindle    = "~/.config/awesome/themes/muhtheme/layouts/dwindle.png"
+theme.layout_max        = "~/.config/awesome/themes/muhtheme/layouts/max.png"
+theme.layout_fullscreen = "~/.config/awesome/themes/muhtheme/layouts/fullscreen.png"
+theme.layout_magnifier  = "~/.config/awesome/themes/muhtheme/layouts/magnifier.png"
+theme.layout_floating   = "~/.config/awesome/themes/muhtheme/layouts/floating.png"
+theme.layout_cornernw   = "/usr/share/awesome/themes/muhtheme/layouts/cornernw.png"
+theme.layout_cornerne   = "/usr/share/awesome/themes/muhtheme/layouts/cornerne.png"
+theme.layout_cornersw   = "/usr/share/awesome/themes/muhtheme/layouts/cornersw.png"
+theme.layout_cornerse   = "/usr/share/awesome/themes/muhtheme/layouts/cornerse.png"
 -- }}}
 
 -- {{{ Titlebar
-theme.titlebar_close_button_focus  = "/usr/share/awesome/themes/solarized/titlebar/close_focus.png"
-theme.titlebar_close_button_normal = "/usr/share/awesome/themes/solarized/titlebar/close_normal.png"
+theme.titlebar_close_button_focus  = "/usr/share/awesome/themes/muhtheme/titlebar/close_focus.png"
+theme.titlebar_close_button_normal = "/usr/share/awesome/themes/muhtheme/titlebar/close_normal.png"
 
 theme.titlebar_minimize_button_normal = "/usr/share/awesome/themes/default/titlebar/minimize_normal.png"
 theme.titlebar_minimize_button_focus  = "/usr/share/awesome/themes/default/titlebar/minimize_focus.png"
 
-theme.titlebar_ontop_button_focus_active  = "/usr/share/awesome/themes/solarized/titlebar/ontop_focus_active.png"
-theme.titlebar_ontop_button_normal_active = "/usr/share/awesome/themes/solarized/titlebar/ontop_normal_active.png"
-theme.titlebar_ontop_button_focus_inactive  = "/usr/share/awesome/themes/solarized/titlebar/ontop_focus_inactive.png"
-theme.titlebar_ontop_button_normal_inactive = "/usr/share/awesome/themes/solarized/titlebar/ontop_normal_inactive.png"
+theme.titlebar_ontop_button_focus_active  = "/usr/share/awesome/themes/muhtheme/titlebar/ontop_focus_active.png"
+theme.titlebar_ontop_button_normal_active = "/usr/share/awesome/themes/muhtheme/titlebar/ontop_normal_active.png"
+theme.titlebar_ontop_button_focus_inactive  = "/usr/share/awesome/themes/muhtheme/titlebar/ontop_focus_inactive.png"
+theme.titlebar_ontop_button_normal_inactive = "/usr/share/awesome/themes/muhtheme/titlebar/ontop_normal_inactive.png"
 
-theme.titlebar_sticky_button_focus_active  = "/usr/share/awesome/themes/solarized/titlebar/sticky_focus_active.png"
-theme.titlebar_sticky_button_normal_active = "/usr/share/awesome/themes/solarized/titlebar/sticky_normal_active.png"
-theme.titlebar_sticky_button_focus_inactive  = "/usr/share/awesome/themes/solarized/titlebar/sticky_focus_inactive.png"
-theme.titlebar_sticky_button_normal_inactive = "/usr/share/awesome/themes/solarized/titlebar/sticky_normal_inactive.png"
+theme.titlebar_sticky_button_focus_active  = "/usr/share/awesome/themes/muhtheme/titlebar/sticky_focus_active.png"
+theme.titlebar_sticky_button_normal_active = "/usr/share/awesome/themes/muhtheme/titlebar/sticky_normal_active.png"
+theme.titlebar_sticky_button_focus_inactive  = "/usr/share/awesome/themes/muhtheme/titlebar/sticky_focus_inactive.png"
+theme.titlebar_sticky_button_normal_inactive = "/usr/share/awesome/themes/muhtheme/titlebar/sticky_normal_inactive.png"
 
-theme.titlebar_floating_button_focus_active  = "/usr/share/awesome/themes/solarized/titlebar/floating_focus_active.png"
-theme.titlebar_floating_button_normal_active = "/usr/share/awesome/themes/solarized/titlebar/floating_normal_active.png"
-theme.titlebar_floating_button_focus_inactive  = "/usr/share/awesome/themes/solarized/titlebar/floating_focus_inactive.png"
-theme.titlebar_floating_button_normal_inactive = "/usr/share/awesome/themes/solarized/titlebar/floating_normal_inactive.png"
+theme.titlebar_floating_button_focus_active  = "/usr/share/awesome/themes/muhtheme/titlebar/floating_focus_active.png"
+theme.titlebar_floating_button_normal_active = "/usr/share/awesome/themes/muhtheme/titlebar/floating_normal_active.png"
+theme.titlebar_floating_button_focus_inactive  = "/usr/share/awesome/themes/muhtheme/titlebar/floating_focus_inactive.png"
+theme.titlebar_floating_button_normal_inactive = "/usr/share/awesome/themes/muhtheme/titlebar/floating_normal_inactive.png"
 
-theme.titlebar_maximized_button_focus_active  = "/usr/share/awesome/themes/solarized/titlebar/maximized_focus_active.png"
-theme.titlebar_maximized_button_normal_active = "/usr/share/awesome/themes/solarized/titlebar/maximized_normal_active.png"
-theme.titlebar_maximized_button_focus_inactive  = "/usr/share/awesome/themes/solarized/titlebar/maximized_focus_inactive.png"
-theme.titlebar_maximized_button_normal_inactive = "/usr/share/awesome/themes/solarized/titlebar/maximized_normal_inactive.png"
+theme.titlebar_maximized_button_focus_active  = "/usr/share/awesome/themes/muhtheme/titlebar/maximized_focus_active.png"
+theme.titlebar_maximized_button_normal_active = "/usr/share/awesome/themes/muhtheme/titlebar/maximized_normal_active.png"
+theme.titlebar_maximized_button_focus_inactive  = "/usr/share/awesome/themes/muhtheme/titlebar/maximized_focus_inactive.png"
+theme.titlebar_maximized_button_normal_inactive = "/usr/share/awesome/themes/muhtheme/titlebar/maximized_normal_inactive.png"
 -- }}}
 -- }}}
 
