@@ -46,4 +46,14 @@ xrandr --dpi 144
 
 nm-applet &
 compton &
-exec awesome
+
+# Restore wallpaper
+nitrogen --restore &
+
+session=${1:-awesome}
+
+case $session in
+    i3|i3wm         ) exec i3;;
+    awesome         ) exec awesome;;
+    *               ) exec $1;;
+esac

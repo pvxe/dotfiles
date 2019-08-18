@@ -16,6 +16,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/syntastic'
+Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
 "Plug 'Valloric/YouCompleteMe'
 "Plug 'lervag/vimtex'
 Plug 'mhinz/vim-startify'
@@ -29,7 +31,7 @@ call plug#end()
 """"""""""""""""""""""""""""""""
 set laststatus=2 " In order for Airline to show all the time
 set showtabline=1 " Only show tab line when there's more than one tab
-let g:airline_theme     = 'dark_minimal'
+let g:airline_theme     = 'gruvbox'
 let g:airline_powerline_fonts   = 1
 let g:airline#extensions#tabline#enabled = 1
 
@@ -72,6 +74,9 @@ let g:startify_fortune_use_unicode = 1
 
 "let g:vimtex_compiler_latexmk = {'callback' : 0}
 "let g:startify_padding_left = 10
+
+colorscheme gruvbox
+set background=dark
 
 set tw=79
 set wildmenu

@@ -4,13 +4,18 @@
 !#include ".Xresources.solarized"
 !#include ".Xresources.tomorrow"
 !#include ".Xresources.eighties"
-#include ".Xresources.pablo"
+!#include ".Xresources.pablo"
+#include ".Xresources.gruvbox"
 
 !}}}
 !! URxvt functionalities !!
 URxvt.scrollBar: false
 URxvt.iso14755: false
 URxvt.iso14755_52: false
+!
+! URxvt perl extensions
+URxvt.perl-ext-common: resize-font
+
 
 !! TRANSPARENCY SETTINGS !!
 !URxvt*depth: 32
@@ -18,7 +23,7 @@ URxvt.iso14755_52: false
 
 !! FONT SETTINGS !!
 !*.font: xft:Iosevka Nerd Font-11:style=Light
-*.font: xft:Iosevka Pux-11:style=Light
+*.font: xft:Iosevka Pux:size=11:style=Light
 *boldFont: xft:Iosevka Nerd Font:size=11
 URxvt.letterSpace: -1
 

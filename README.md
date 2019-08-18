@@ -1,7 +1,6 @@
-# My dotfiles (solarized-dark theme)
+# My dotfiles
 
 * Follows GNU Stow structure
-* Solarized dark theme for graphical aplications
 * NerdFonts patched font: Iosevka (_see Font_)
 
 ## About GNU Stow
@@ -38,6 +37,14 @@ eg. zathurarc must be inside `.config/zathura/`
                 zathurarc
 ```
 
+## AwesomeWM
+
+** Requires a nerd-font patched font **
+
+Configuration files need a big tiding. There are some hardcoded paths and
+probably stowing this will require fixing some errors before working
+completely.
+
 ## URxvt
 All attributes are set via .Xresources
 
@@ -52,28 +59,21 @@ All attributes are set via .Xresources
 .vimrc comes with vim-plug as plugin manager, it will install automatically if not already. (See [automatic installation](https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation) from vim-plug's wiki)
 
 ## Zathura
-**WIP** as colorscheme is not complete yet.
+Colorscheme is set via include directive. Themes should be saved inside
+`themes/` folder.
 
-- [] index(tab) colorscheme set to solarized dark palette
-- [] research if there's any way of setting colors as constants
-- [] if not possible research the possibility of splitting styles into separate files
-
-**Recoloring** is active to render PDF's solarized like, at
-```
-set recolor-lightcolor          "#002b36"
-set recolor-darkcolor           "#839496"
-set recolor                     "true"
-
-set recolor-keephue "false"
-
-```
+**Recoloring** is active to render PDF's following the colorscheme set.
 
 ## Font
-**Not the font you can download from nerd-fonts repository already patched**
+**NOTE: THIS IS A SLIGHTLY CUSTOM IOSEVKA COMPILATION**
 
-Iosevka Light is the main font for this theme and it has been patched using nerd-fonts manual font-patcher python script.
-It has a slight change in the build parameters (`[iosevka_cloned_repo]/parameters.toml`) over powerline specific values.
+Iosevka Light is the main font for this theme, it has a slight change in the build parameters
+(`[iosevka_cloned_repo]/parameters.toml`) over powerline specific values.
+
 ```
 70 | powerlineScaleY = 1.2 # Vertical scale
 ```
+
+It has been patched using nerd-fonts manual font-patcher python script
+afterwards.
 
