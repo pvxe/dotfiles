@@ -64,6 +64,13 @@ Colorscheme is set via include directive. Themes should be saved inside
 
 **Recoloring** is active to render PDF's following the colorscheme set.
 
+## Pureline
+Pureline is a pure bash script status line for Bash shell. See [pureline](https://github.com/chris-marsh/pureline)
+
+**NOTE: There is no specific path to store the configuration. It is always
+needed to call pureline with the path to the config file. See Pureline
+README.**
+
 ## Font
 **NOTE: THIS IS A SLIGHTLY CUSTOM IOSEVKA COMPILATION**
 
