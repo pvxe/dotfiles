@@ -115,6 +115,7 @@ interval=30
 command=~/.config/i3blocks/$BLOCK_NAME/$BLOCK_NAME -u \#fabd2f -b \#ebdbb2 -q
 markup=pango
 interval=3600
+signal=2
 
 # Date Time
 
