@@ -11,17 +11,15 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/syntastic'
-Plug 'altercation/vim-colors-solarized'
+"Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
-"Plug 'Valloric/YouCompleteMe'
-"Plug 'lervag/vimtex'
-Plug 'mhinz/vim-startify'
+Plug 'lervag/vimtex'
 Plug 'ryanoasis/vim-devicons'
+Plug 'vim-airline/vim-airline'
+"Plug 'mhinz/vim-startify'
 
 call plug#end()
 "}}}
@@ -62,13 +60,11 @@ let g:syntastic_mode_map = {
 \    "passive_filetypes": ["tex"] }
 "}}}
 "{{{ Startify configuration
-function! StartifyEntryFormat()
-    return '" " .WebDevIconsGetFileTypeSymbol(absolute_path) ."  ". entry_path'
-endfunction
-"let g:entry_format =
-"". '( '. WebDevIconsGetFileTypeSymbol(entry_path) .') '. entry_path"
-
-let g:startify_fortune_use_unicode = 1
+"function! StartifyEntryFormat()
+"    return '" " .WebDevIconsGetFileTypeSymbol(absolute_path) ."  ". entry_path'
+"endfunction
+"
+"let g:startify_fortune_use_unicode = 1
 "}}}
 
 
