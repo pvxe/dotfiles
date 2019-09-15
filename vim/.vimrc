@@ -75,15 +75,14 @@ let g:startify_fortune_use_unicode = 1
 "let g:vimtex_compiler_latexmk = {'callback' : 0}
 "let g:startify_padding_left = 10
 
+set termguicolors
+let g:gruvbox_contrast_dark="medium"
 colorscheme gruvbox
 set background=dark
 
-set tw=79
-set wildmenu
+set cursorline
 
-set shiftwidth=4
-set tabstop=4
-set expandtab
+set wildmenu
 
 set list
 set listchars=tab:\|\·,eol:↲
