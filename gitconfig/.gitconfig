@@ -1,0 +1,15 @@
+[user]
+	name		=	Jose M. Guisado Gomez
+	email		=	guigom@riseup.net
+
+[sendemail]
+	smtpserver	=	mail.riseup.net
+	smtpserverport	=	587
+	smtpencryption	=	tls
+	smtpuser	=	guigom
+
+	confirm		=	always
+	suppresscc	=	self
+
+[core]
+	editor		=	vim
