@@ -231,6 +231,6 @@ mode "$mode_launcher" {
     bindsym Return mode "default"
 }
 
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +2%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -2%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +2% && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -2% && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
