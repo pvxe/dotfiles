@@ -199,6 +199,11 @@ bar {
         }
 }
 
+# Scratchpad bindings
+bindsym $mod+minus scratchpad show
+bindsym $mod+Shift+minus move scratchpad
+
+# Multihead container placement
 bindsym $mod+Shift+greater move container to output right
 bindsym $mod+Shift+less move container to output left
 
