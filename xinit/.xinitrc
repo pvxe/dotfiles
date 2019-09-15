@@ -40,19 +40,17 @@ xset +fp /usr/share/fonts/patched
 
 xrandr --dpi 144
 
-# Start programs and launch WM
+# Start common programs
 
 nm-applet &
 compton &
-
-# Restore wallpaper
-nitrogen --restore &
 
 session=${1:-awesome}
 
 case $session in
     i3|i3wm         )
         export TERMINAL="kitty" # i3-sensible-terminal overrule
+        nitrogen --restore & # Restore wallpaper
         exec i3;;
     awesome         )
         export LUA_PATH="$HOME/.config/awesome/muhwidgets/?.lua;;"
