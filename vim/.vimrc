@@ -56,7 +56,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_mode_map = {
-\    "mode": "active",
+\    "mode": "passive",
 \    "active_filetypes": [],
 \    "passive_filetypes": ["tex"] }
 "}}}
