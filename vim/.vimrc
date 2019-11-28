@@ -20,6 +20,7 @@ Plug 'lervag/vimtex'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 "Plug 'mhinz/vim-startify'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 "}}}
