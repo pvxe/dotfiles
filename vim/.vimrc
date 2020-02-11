@@ -89,6 +89,8 @@ set showcmd
 set nu
 set foldmethod=marker
 
+let g:polyglot_disabled = ['latex']
+
 if exists("g:loaded_webdevicons")
   call webdevicons#refresh()
 endif
