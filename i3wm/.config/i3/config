@@ -207,6 +207,11 @@ bindsym $mod+Shift+minus move scratchpad
 # Multihead container placement
 bindsym $mod+Shift+greater move container to output right
 bindsym $mod+Shift+less move container to output left
+# Multihead workspace placement
+bindsym $mod+Control+Up move workspace to output up
+bindsym $mod+Control+Down move workspace to output down
+bindsym $mod+Control+Right move workspace to output right
+bindsym $mod+Control+Left move workspace to output left
 
 # Hide vertical borders adjacent to the screen
 hide_edge_borders vertical
