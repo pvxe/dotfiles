@@ -45,13 +45,13 @@ signal=10
 [memory]
 label= 
 separator=false
-interval=30
+interval=2
 
 [memory]
 label= 
 instance=swap
 separator=false
-interval=30
+interval=15
 
 # Disk usage
 #
@@ -69,7 +69,7 @@ interval=30
 # see the script for details.
 [cpu_usage]
 label=龍 
-interval=10
+interval=2
 min_width=100.00%
 #separator=false
 
@@ -95,9 +95,9 @@ color=#b8bb26
 interval=2
 separator=false
 
-[bandwidth]
-#instance=eth0
-interval=5
+#[bandwidth]
+##instance=eth0
+#interval=1
 
 
 #[load_average]
@@ -109,7 +109,7 @@ interval=5
 [battery]
 label= 
 #instance=1
-interval=30
+interval=20
 
 [arch-update]
 command=~/.config/i3blocks/$BLOCK_NAME/$BLOCK_NAME -u \#fabd2f -b \#ebdbb2 -q
