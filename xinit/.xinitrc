@@ -43,7 +43,7 @@ xrandr --dpi 144
 # Start common programs
 
 nm-applet &
-compton &
+picom &
 
 session=${1:-awesome}
 
