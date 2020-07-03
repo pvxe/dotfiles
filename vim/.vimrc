@@ -19,7 +19,6 @@ Plug 'morhetz/gruvbox'
 Plug 'lervag/vimtex'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
-"Plug 'mhinz/vim-startify'
 Plug 'sheerun/vim-polyglot'
 
 call plug#end()
@@ -33,14 +32,6 @@ set showtabline=1 " Only show tab line when there's more than one tab
 let g:airline_theme     = 'gruvbox'
 let g:airline_powerline_fonts   = 1
 let g:airline#extensions#tabline#enabled = 1
-
-"let g:airline_section_z    = '%{getcwd()}'
-"let g:airline_symbols.linenr = "¶"
-"let g:airline_symbols.linenr = ' ☰ '
-"let g:airline_symbols.whitespace = " \ue211 "
-"let g:airline_symbols.space = \"*"
-"let g:airline_symbols.branch = "\U2387 "
-
 "}}}
 "{{{ Syntastic configuration
 """"""""""""""""""""""""""""""""
@@ -60,17 +51,9 @@ let g:syntastic_mode_map = {
 \    "active_filetypes": [],
 \    "passive_filetypes": ["tex"] }
 "}}}
-"{{{ Startify configuration
-"function! StartifyEntryFormat()
-"    return '" " .WebDevIconsGetFileTypeSymbol(absolute_path) ."  ". entry_path'
-"endfunction
-"
-"let g:startify_fortune_use_unicode = 1
-"}}}
 
 
 "let g:vimtex_compiler_latexmk = {'callback' : 0}
-"let g:startify_padding_left = 10
 
 set termguicolors
 let g:gruvbox_contrast_dark="medium"
