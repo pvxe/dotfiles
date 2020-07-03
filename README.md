@@ -1,6 +1,6 @@
 # My dotfiles
 
-* Follows GNU Stow structure
+* I use GNU Stow to create symlinks
 * NerdFonts patched font: Iosevka (_see Font_)
 
 ## About GNU Stow
@@ -9,20 +9,25 @@
 dotfiles programs/packages structure is something like this
 ```
 dotfiles/
-    vim/
-    zathura/
-    xorg-xrdb/
+    {computer}/
+	vim/
+	zathura/
+	xorg-xrdb/
     ...
 ```
 
-Each one can be __stowed__ or __unstowed__ by simply using `stow [options] package`
-eg. to stow vim's configuration (create the symlinks and place them where vim expects to find them)
+Each one can be __stowed__ or __unstowed__ by simply using `stow -d {computer} package` and
+`stow -D -d {computer} package` respectively.  
+
+eg. to stow laptop vim's configuration
 ```
-stow vim
+stow -d laptop/ vim
 ```
 
+**Note:** Make sure that `~` is your parent directory (correct stow target). If not, specify target with
+`stow -t ~/ ...`
+
 Each package folder in addition expose the folder hierarchy expected
-(inside `dotfiles/` for these examples)
 
 eg. vim's `.vimrc` should be just inside your home folder `~`
 ```
