@@ -1,0 +1,6 @@
+rofi.location: 0
+rofi.width: 50
+
+rofi.combi-modi:    window,run,ssh
+rofi.font:          Iosevka Pux Light 17
+rofi.modi:          combi

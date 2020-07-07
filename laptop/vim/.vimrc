@@ -12,14 +12,17 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/syntastic'
-"Plug 'altercation/vim-colors-solarized'
-Plug 'morhetz/gruvbox'
-Plug 'lervag/vimtex'
+
 Plug 'ryanoasis/vim-devicons'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
+
+Plug 'lervag/vimtex'
 Plug 'sheerun/vim-polyglot'
+Plug 'scrooloose/syntastic'
+
+Plug 'dylanaraps/wal.vim'
+
 
 call plug#end()
 "}}}
@@ -27,9 +30,10 @@ call plug#end()
 """"""""""""""""""""""""""""""""
 "           AIRLINE            "
 """"""""""""""""""""""""""""""""
+colorscheme wal
 set laststatus=2 " In order for Airline to show all the time
 set showtabline=1 " Only show tab line when there's more than one tab
-let g:airline_theme     = 'gruvbox'
+let g:airline_theme     = 'wal'
 let g:airline_powerline_fonts   = 1
 let g:airline#extensions#tabline#enabled = 1
 "}}}
@@ -52,15 +56,7 @@ let g:syntastic_mode_map = {
 \    "passive_filetypes": ["tex"] }
 "}}}
 
-
-"let g:vimtex_compiler_latexmk = {'callback' : 0}
-
-set termguicolors
-let g:gruvbox_contrast_dark="medium"
-colorscheme gruvbox
 set background=dark
-
-set cursorline
 
 set wildmenu
 
@@ -73,8 +69,3 @@ set nu
 set foldmethod=marker
 
 let g:polyglot_disabled = ['latex']
-
-if exists("g:loaded_webdevicons")
-  call webdevicons#refresh()
-endif
-

@@ -193,6 +193,7 @@ bar {
         colors {
             background $black
             statusline $white
+            separator $red
 
             focused_workspace   $darkwhite  $darkwhite  $black
             inactive_workspace  $black      $black      $white

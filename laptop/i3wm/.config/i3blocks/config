@@ -80,18 +80,15 @@ min_width=100.00%
 [iface]
 label= 
 instance=enp0s20f0u2
-color=#98971a
 interval=10
 separator=false
 
 [iface]
 label= 
-color=#b8bb26
 interval=10
 separator=false
 
 [ssid]
-color=#b8bb26
 interval=2
 separator=false
 
@@ -112,9 +109,10 @@ label=
 interval=20
 
 [arch-update]
-command=~/.config/i3blocks/$BLOCK_NAME/$BLOCK_NAME -u \#fabd2f -b \#ebdbb2 -q
+command=~/.config/i3blocks/$BLOCK_NAME/$BLOCK_NAME
 markup=pango
 interval=3600
+QUIET=true
 signal=2
 
 # Date Time

@@ -5,7 +5,7 @@
 !#include ".Xresources.tomorrow"
 !#include ".Xresources.eighties"
 !#include ".Xresources.pablo"
-#include ".Xresources.gruvbox"
+!#include ".Xresources.gruvbox"
 
 !}}}
 !! URxvt functionalities !!

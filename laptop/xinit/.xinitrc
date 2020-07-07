@@ -51,6 +51,7 @@ case $session in
     i3|i3wm         )
         export TERMINAL="kitty" # i3-sensible-terminal overrule
         nitrogen --restore & # Restore wallpaper
+        wal -n -R
         exec i3;;
     awesome         )
         export LUA_PATH="$HOME/.config/awesome/muhwidgets/?.lua;;"
