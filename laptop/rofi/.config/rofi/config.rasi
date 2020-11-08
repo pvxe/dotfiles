@@ -1,0 +1,7 @@
+configuration {
+	modi: "combi";
+	width: 50;
+	font: "Iosevka Pux Light 17";
+	location: 0;
+	combi-modi: "window,run,ssh";
+}
