@@ -1,7 +1,7 @@
 # Fonts
 set font "Iosevka 11"
 
-include themes/gruvbox
+include themes/theme
 
 set recolor-keephue "false"
 
