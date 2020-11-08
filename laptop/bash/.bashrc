@@ -10,7 +10,7 @@ case ${TERM} in
   xterm*|rxvt*|Eterm|aterm|kterm|gnome*)
     (cat ~/.cache/wal/sequences &)
     ;;
-  screen*)
+  screen*|linux)
     source ~/.cache/wal/colors-tty.sh
     ;;
 esac
