@@ -16,12 +16,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
+Plug 'dylanaraps/wal.vim'
 
-Plug 'lervag/vimtex'
+Plug 'w0rp/ale'
+Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/syntastic'
 
-Plug 'dylanaraps/wal.vim'
 
 
 call plug#end()
@@ -59,6 +60,9 @@ let g:syntastic_mode_map = {
 set background=dark
 
 set wildmenu
+set path+=**
+" Do not unload buffers when abandoning them
+set hidden
 
 set list
 set listchars=tab:\|\·,eol:↲
@@ -69,3 +73,4 @@ set nu
 set foldmethod=marker
 
 let g:polyglot_disabled = ['latex']
+let g:tex_flavor = 'latex'
