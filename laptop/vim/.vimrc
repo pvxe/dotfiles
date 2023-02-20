@@ -1,6 +1,8 @@
 "runtime! archlinux.vim
 set encoding=utf-8
 
+let g:polyglot_disabled = ['autoindent', 'latex', 'sensible']
+
 "{{{ vim-plug configuration
 
 " Auto-install vim-plug, see wiki for more tips
@@ -18,12 +20,10 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
 Plug 'dylanaraps/wal.vim'
 
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale', { 'for': 'python' }
 Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/syntastic'
-
-
 
 call plug#end()
 "}}}
@@ -65,12 +65,11 @@ set path+=**
 set hidden
 
 set list
-set listchars=tab:\|\·,eol:↲
+set listchars=tab:\|\ ,eol:↲
 
 set noshowmode
 set showcmd
 set nu
 set foldmethod=marker
 
-let g:polyglot_disabled = ['latex']
 let g:tex_flavor = 'latex'
