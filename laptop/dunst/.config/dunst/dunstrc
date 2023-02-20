@@ -14,8 +14,7 @@
     separator_color = frame
     sort = yes
     idle_threshold = 120
-    font = Iosevka Light 9
-    #font = TerminessTTF Nerd Font 9
+    font = Iosevka Light 10
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b\n"
@@ -26,7 +25,7 @@
     ignore_newline = no
     stack_duplicates = true
     hide_duplicate_count = false
-    show_indicators = false # (U), (UA), ...
+    show_indicators = true # (U), (UA), ...
     icon_position = off
     max_icon_size = 0
     icon_path = /usr/share/icons/Paper/16x16/mimetypes/:/usr/share/icons/Paper/48x48/status/:/usr/share/icons/Paper/16x16/devices/:/usr/share/icons/Paper/48x48/notifications/:/usr/share/icons/Paper/48x48/emblems/
@@ -44,13 +43,12 @@
     mouse_left_click = close_current
     mouse_middle_click = do_action
     mouse_right_click = do_action
-[experimental]
-    per_monitor_dpi = false
-[shortcuts]
     close = ctrl+space
     close_all = ctrl+shift+space
-    history = ctrl+masculine
-    context = ctrl+shift+period
+    history = ctrl+shift+period
+    context = ctrl+period
+[experimental]
+    per_monitor_dpi = false
 [urgency_low]
     background = "#98971a"
     foreground = "#ebdbb2"
