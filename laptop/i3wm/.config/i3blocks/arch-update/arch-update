@@ -11,6 +11,12 @@ import os
 import re
 
 
+output = subprocess.check_output(("xrdb", "-query")).decode("utf-8")
+xresources = dict([line.split(":\t")
+                   for line in output.split("\n")
+                   if line != ''])
+
+
 def create_argparse():
     def _default(name, default='', arg_type=str):
         val = default
@@ -25,13 +31,13 @@ def create_argparse():
     parser.add_argument(
         '-b',
         '--base_color',
-        default = _default('BASE_COLOR', 'green'),
+        default = xresources["*color3"].upper(),
         help='base color of the output(default=green)'
     )
     parser.add_argument(
         '-u',
         '--updates_available_color',
-        default = _default('UPDATE_COLOR', 'yellow'),
+        default = xresources["*color2"].upper(),
         help='color of the output, when updates are available(default=yellow)'
     )
     parser.add_argument(
