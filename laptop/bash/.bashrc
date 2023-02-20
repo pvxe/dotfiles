@@ -1,3 +1,8 @@
+#!/bin/bash
+
+export HISTSIZE=1000
+export HISTCONTROL="ignorespace"
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -17,4 +22,4 @@ esac
 
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 
-source ~/repos/pureline/pureline ~/.pureline.conf
+eval "$(starship init bash)"
