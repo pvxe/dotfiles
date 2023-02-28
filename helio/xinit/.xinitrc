@@ -32,13 +32,9 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     unset f
 fi
 
-# Set dpi
-
-xrandr --dpi 125.37
-
 # Start common programs
 
-picom &
+picom --no-fading-openclose &
 
 session=${1:-i3wm}
 

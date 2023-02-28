@@ -23,12 +23,11 @@ URxvt.perl-ext-common: resize-font
 
 
 !! FONT SETTINGS !!
-*.font: xft:Iosevka:size=9:style=Light
+*.font: xft:Iosevka:size=10:style=Light
 URxvt.letterSpace: -1
 
 
 ! XFT/DPI SETTINGS
-Xft.dpi: 125.37
 Xft.antialias: true
 Xft.hinting: true
 Xft.autohint: false
