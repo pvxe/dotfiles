@@ -1,8 +1,8 @@
 configuration {
-	modi: "combi";
+	modes: "combi";
 	width: 50;
 	location: 0;
-	combi-modi: "window,run,ssh";
+	combi-modes: "run,ssh";
 	font: "Iosevka Light 13";
+	icon-theme: "Papirus";
 }
-@theme "/usr/share/rofi/themes/wal.rasi"
