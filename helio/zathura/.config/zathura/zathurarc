@@ -1,0 +1,13 @@
+# Fonts
+set font "Iosevka 11"
+
+include themes/theme
+
+set recolor-keephue "false"
+
+set window-title-basename true
+set statusbar-home-tilde true
+set incremental-search
+
+set syntex true
+set syntex-editor-command "vim --remote-silent +%{line} %{input}"

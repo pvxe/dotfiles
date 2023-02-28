@@ -1,0 +1,43 @@
+!#define background_opacity 80
+! special
+*.foreground:   #b0b0b0
+#ifdef background_opacity
+*.background:   [background_opacity]#2d2d2d
+#else
+*.background:   #2d2d2d
+#endif
+*.cursorColor:  #b0b0b0
+
+! black
+*.color0:       #222222
+*.color8:       #666666
+
+! red
+*.color1:       #e84f4f
+*.color9:       #d23d3d
+
+! green
+/* *.color2:       #90ce42 */
+*.color2:       #87af5f
+*.color10:      #94e077
+
+! yellow
+*.color3:       #fea63c
+*.color11:      #ffe863
+
+! blue
+*.color4:       #66aabb
+*color12 :      #729FCF
+
+! magenta
+*.color5:       #b7416e
+*.color13:      #e16a98
+
+! cyan
+*color6:        #36989B
+*color14:       #44E8A1
+
+! white
+*.color7:       #dddddd
+*.color15:      #cccccc
+

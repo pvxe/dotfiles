@@ -1,0 +1,35 @@
+! {{{ URxvt colors
+
+!#define background_opacity 85
+!#include ".Xresources.solarized"
+!#include ".Xresources.tomorrow"
+!#include ".Xresources.eighties"
+!#include ".Xresources.pablo"
+!#include ".Xresources.gruvbox"
+#include ".Xresources.nord"
+
+!}}}
+!! URxvt functionalities !!
+URxvt.scrollBar: false
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+!
+! URxvt perl extensions
+URxvt.perl-ext-common: resize-font
+
+
+!! TRANSPARENCY SETTINGS !!
+!URxvt*depth: 32
+
+
+!! FONT SETTINGS !!
+*.font: xft:Iosevka:size=9:style=Light
+URxvt.letterSpace: -1
+
+
+! XFT/DPI SETTINGS
+Xft.dpi: 125.37
+Xft.antialias: true
+Xft.hinting: true
+Xft.autohint: false
+Xft.hintstyle: hintfull

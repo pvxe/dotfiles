@@ -1,0 +1,8 @@
+configuration {
+	modi: "combi";
+	width: 50;
+	location: 0;
+	combi-modi: "window,run,ssh";
+	font: "Iosevka Light 13";
+}
+@theme "/usr/share/rofi/themes/wal.rasi"
